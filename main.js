@@ -1,10 +1,15 @@
 const { app, BrowserWindow } = require("electron");
+const path = require("path");
 
 function createWindow() {
 	const window = new BrowserWindow({
-		width: 800,
-		height: 600,
-		icon: './calendar.png'
+		titleBarStyle: 'hidden',
+		title: 'Google Calendar',
+		width: 1920,
+		height: 1052,
+		minHeight: 900,
+		minWidth: 1281,
+		icon: path.join(__dirname, 'calendar.png')
 	});
 
 	window.loadURL("https://calendar.google.com/calendar/u/0/r");
